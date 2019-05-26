@@ -53,6 +53,7 @@ def all_winter_holiday_supplies(holiday_hash)
 
 
 end
+
 def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
@@ -65,13 +66,14 @@ def all_supplies_in_holidays(holiday_hash)
     season =seasons.to_s.capitalize!
     puts season << ":"
     holidays.map do |holiday,supplies|
-    message =""
+    message ="  "
     h = holiday.to_s.split("_")
+    h_string =""
     h.each do |m|
      h_string= h.join(" ")
     end
-    message << ": "
-    s = supplies.join(", ")
+    message << h_string.capitalize! << ": "
+      s = supplies.join(", ")
     puts message << s
     end
    
