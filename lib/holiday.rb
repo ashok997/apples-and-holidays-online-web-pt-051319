@@ -70,14 +70,13 @@ def all_supplies_in_holidays(holiday_hash)
     message ="  "
     h = holiday.to_s.split("_")
     h_string = ""
-    h.each do |m|
-     h_string << m.capitalize! 
-    end
 
-    #h_string =h.join(" ")
-   # h.each do |m|
-   #  h_string= h.join(" ")
-   # end
+    h.map do |m|
+     m.capitalize!
+    end
+    
+    h_string = h.join(" ")
+  
     message << h_string<< ": "
       s = supplies.join(", ")
     puts message << s
