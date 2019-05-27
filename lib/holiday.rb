@@ -91,9 +91,9 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ
   holiday_hash.each do  |seasons,holidays|
     holidays.each do |holiday,supplies|
-     supplies.map do |supply|
+     supplies.collect do |supply|
       if supply=="BBQ"
-       return holiday
+       #return holiday
       end
      end
       
